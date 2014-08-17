@@ -10,15 +10,15 @@ JXRegular是一个封装正则表达式的小组件, 可以简单准确的匹配
 
 ####2.1 通过自定义正则表达式, 进行字符串匹配 (以下方法均为NSString类别)
 
-**(1) 是否匹配正则表达式**
+**是否匹配正则表达式**
 
     BOOL isMatching = [@"Hello World" isRegexMatching:@"^.*$"];
 	
-**(2) 替换正则表达式匹配到的字符串**
+**替换正则表达式匹配到的字符串**
 
 	    NSString *replaceStr = [@"Hello World" regex:@"^.*$" replaceStr:@"Thanks"];
 
-**(3) 正则表达式匹配子字符串**
+**正则表达式匹配子字符串**
 
 	    NSString *subStr = [@"Hello World" regexMatching:@"\\w* \\w*"];
 
