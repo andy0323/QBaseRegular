@@ -1,10 +1,7 @@
-#import "JXRegular.h"
+#import "NSString+JXRegular.h"
 
-@implementation JXRegular
+@implementation NSString (JXRegular)
 
-@end
-
-@implementation NSString (Regular)
 
 /**
  *  是否匹配正则表达式

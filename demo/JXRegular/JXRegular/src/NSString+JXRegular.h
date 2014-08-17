@@ -1,5 +1,5 @@
 //
-//  JXRegular.h
+//  NSString+JXRegular.h
 //  JXRegular
 //
 //  Created by andy on 8/17/14.
@@ -8,13 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JXRegular : NSObject
-
-
-
-@end
-
-@interface NSString (Regular)
+@interface NSString (JXRegular)
 
 /**
  *  是否匹配正则表达式
@@ -43,6 +37,5 @@
  *  @return 匹配正则表达式的子字符串
  */
 - (NSString *)regexMatching:(NSString *)regex;
-
 
 @end

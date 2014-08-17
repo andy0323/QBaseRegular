@@ -19,7 +19,7 @@
 		A137FD4219A04C7A001CBA32 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A137FD2A19A04C7A001CBA32 /* UIKit.framework */; };
 		A137FD4A19A04C7A001CBA32 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A137FD4819A04C7A001CBA32 /* InfoPlist.strings */; };
 		A137FD4C19A04C7A001CBA32 /* JXRegularTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A137FD4B19A04C7A001CBA32 /* JXRegularTests.m */; };
-		A137FD5819A04CBA001CBA32 /* JXRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = A137FD5719A04CBA001CBA32 /* JXRegular.m */; };
+		A137FD5D19A0EF1D001CBA32 /* NSString+JXRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = A137FD5C19A0EF1D001CBA32 /* NSString+JXRegular.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,9 +49,9 @@
 		A137FD4719A04C7A001CBA32 /* JXRegularTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JXRegularTests-Info.plist"; sourceTree = "<group>"; };
 		A137FD4919A04C7A001CBA32 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A137FD4B19A04C7A001CBA32 /* JXRegularTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXRegularTests.m; sourceTree = "<group>"; };
-		A137FD5619A04CBA001CBA32 /* JXRegular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXRegular.h; sourceTree = "<group>"; };
-		A137FD5719A04CBA001CBA32 /* JXRegular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXRegular.m; sourceTree = "<group>"; };
-		A137FD5A19A0E79C001CBA32 /* AboutRegex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutRegex.h; sourceTree = "<group>"; };
+		A137FD5A19A0E79C001CBA32 /* Help.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Help.h; sourceTree = "<group>"; };
+		A137FD5B19A0EF1D001CBA32 /* NSString+JXRegular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JXRegular.h"; sourceTree = "<group>"; };
+		A137FD5C19A0EF1D001CBA32 /* NSString+JXRegular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JXRegular.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,7 @@
 		A137FD1A19A04C7A001CBA32 = {
 			isa = PBXGroup;
 			children = (
-				A137FD5A19A0E79C001CBA32 /* AboutRegex.h */,
+				A137FD5A19A0E79C001CBA32 /* Help.h */,
 				A137FD5519A04CAA001CBA32 /* src */,
 				A137FD2C19A04C7A001CBA32 /* JXRegular */,
 				A137FD4519A04C7A001CBA32 /* JXRegularTests */,
@@ -153,8 +153,8 @@
 		A137FD5519A04CAA001CBA32 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				A137FD5619A04CBA001CBA32 /* JXRegular.h */,
-				A137FD5719A04CBA001CBA32 /* JXRegular.m */,
+				A137FD5B19A0EF1D001CBA32 /* NSString+JXRegular.h */,
+				A137FD5C19A0EF1D001CBA32 /* NSString+JXRegular.m */,
 			);
 			name = src;
 			path = JXRegular/src;
@@ -256,7 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A137FD3719A04C7A001CBA32 /* AppDelegate.m in Sources */,
-				A137FD5819A04CBA001CBA32 /* JXRegular.m in Sources */,
+				A137FD5D19A0EF1D001CBA32 /* NSString+JXRegular.m in Sources */,
 				A137FD3319A04C7A001CBA32 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,6 +454,7 @@
 				A137FD5119A04C7A001CBA32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A137FD5219A04C7A001CBA32 /* Build configuration list for PBXNativeTarget "JXRegularTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +463,7 @@
 				A137FD5419A04C7A001CBA32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,23 +7,24 @@
 //
 
 #import "AppDelegate.h"
-#import "JXRegular.h"
+#import "NSString+JXRegular.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    // 判断是否为中文
+    BOOL isMatching = [@"匹配是否含有中文" isRegexMatching:@"[^x00-xff]*"];
+    NSLog(@"匹配是否含有中文结果: %d", isMatching);
     
-    BOOL isMatching = [@"Hello World" isRegexMatching:@"^.*$"];
-    NSLog(@"%d", isMatching);
-    
-    
-    NSString *subStr = [@"Hello World" regexMatching:@"\\w* \\w*"];
+    // 查找匹配正则的子串
+    NSString *subStr = [@"我的手机号码是010-88888888" regexMatching:@"\\d{3}-\\d{8}|\\d{4}-\\d{7}"];
     NSLog(@"%@", subStr);
     
-    
-    NSString *replaceStr = [@"Hello World" regex:@"^.*$" replaceStr:@"Thanks"];
+    // 替换匹配正的的子串
+    NSString *replaceStr = [@"HAHAHA,我有一个的好东西" regex:@"HA" replaceStr:@"哈"];
     NSLog(@"%@", replaceStr);
     
     
