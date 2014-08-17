@@ -16,11 +16,11 @@ JXRegular是一个封装正则表达式的小组件, 可以简单准确的匹配
 	
 **替换正则表达式匹配到的字符串**
 
-	    NSString *replaceStr = [@"Hello World" regex:@"^.*$" replaceStr:@"Thanks"];
+	NSString *replaceStr = [@"Hello World" regex:@"^.*$" replaceStr:@"Thanks"];
 
 **正则表达式匹配子字符串**
 
-	    NSString *subStr = [@"Hello World" regexMatching:@"\\w* \\w*"];
+	NSString *subStr = [@"Hello World" regexMatching:@"\\w* \\w*"];
 
 ####2.2 通过JXRegular快速判断是否满足用户所想要的信息
 
