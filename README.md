@@ -6,26 +6,25 @@ JXRegular是一个封装正则表达式的小组件, 可以简单准确的匹配
 
 1. 将src中的文件导入项目
 
-### 2. 如何匹配正则表达式
-
-####2.1 通过自定义正则表达式, 进行字符串匹配 (以下方法均为NSString类别)
+### 2. 如何匹配正则表达式 
 
 **是否匹配正则表达式**
 
-    BOOL isMatching = [@"Hello World" isRegexMatching:@"^.*$"];
+    // 判断是否为中文
+    BOOL isMatching = [@"匹配是否含有中文" isRegexMatching:@"[^x00-xff]*"];
+    NSLog(@"匹配是否含有中文结果: %d", isMatching);
 	
 **替换正则表达式匹配到的字符串**
 
-	NSString *replaceStr = [@"Hello World" regex:@"^.*$" replaceStr:@"Thanks"];
+	// 替换匹配正的的子串
+    NSString *replaceStr = [@"HAHAHA,我有一个的好东西" regex:@"HA" replaceStr:@"哈"];
+    NSLog(@"%@", replaceStr);
 
 **正则表达式匹配子字符串**
 
-	NSString *subStr = [@"Hello World" regexMatching:@"\\w* \\w*"];
-
-####2.2 通过JXRegular快速判断是否满足用户所想要的信息
-
-> 未完成..
-
+	// 查找匹配正则的子串
+    NSString *subStr = [@"我的手机号码是010-88888888" regexMatching:@"\\d{3}-\\d{8}|\\d{4}-\\d{7}"];
+    NSLog(@"%@", subStr);
 
 ### 3. 不了解正则表达式怎么办.?
 
