@@ -45,4 +45,29 @@
     return nil;
 }
 
+/**
+ *  匹配是否符合某种类型的正则
+ */
+- (BOOL)isRegexType:(JXRegexType)regexType
+{
+    NSString *regexStr;
+    switch (regexType) {
+        case regexType_QQ:
+            regexStr = @"[1-9][0-9]{4,}";
+            break;
+        case regexType_Email:
+            regexStr = @"w+([-+.]w+)*@w+([-.]w+)*.w+([-.]w+)*";
+            break;
+        case regexType_PhoneNumber:
+            regexStr = @"d{3}-d{8}|d{4}-d{7}";
+            break;
+        case regexType_Ip:
+            regexStr = @"d+.d+.d+.d+";
+            break;
+        default:
+            break;
+    }
+    return [self isRegexMatching:regexStr];
+}
+
 @end

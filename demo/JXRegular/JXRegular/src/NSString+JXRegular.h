@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+    regexType_QQ = 0,
+    regexType_Email ,
+    regexType_PhoneNumber,
+    regexType_Ip
+}JXRegexType;
+
 @interface NSString (JXRegular)
 
 /**
@@ -37,5 +44,14 @@
  *  @return 匹配正则表达式的子字符串
  */
 - (NSString *)regexMatching:(NSString *)regex;
+
+/**
+ *  匹配是否符合某种类型的正则
+ *
+ *  @param regexType 某种正则规则
+ *
+ *  @return 是否匹配
+ */
+- (BOOL)isRegexType:(JXRegexType)regexType;
 
 @end
