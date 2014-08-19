@@ -28,6 +28,11 @@
     NSLog(@"%@", replaceStr);
     
     
+    // 匹配某种业务
+    isMatching = [@"66609757" isRegexType:regexType_QQ];
+    NSLog(@"%d", isMatching);
+
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
