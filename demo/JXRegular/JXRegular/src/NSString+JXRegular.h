@@ -12,7 +12,8 @@ typedef enum {
     regexType_QQ = 0,
     regexType_Email ,
     regexType_PhoneNumber,
-    regexType_Ip
+    regexType_Ip,
+    regexType_URL
 }JXRegexType;
 
 @interface NSString (JXRegular)

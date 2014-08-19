@@ -29,7 +29,7 @@
     
     
     // 匹配某种业务
-    isMatching = [@"66609757" isRegexType:regexType_QQ];
+    isMatching = [@"http://www.baidu.com" isRegexType:regexType_URL];
     NSLog(@"%d", isMatching);
 
     

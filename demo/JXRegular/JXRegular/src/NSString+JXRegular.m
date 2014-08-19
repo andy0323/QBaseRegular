@@ -64,6 +64,9 @@
         case regexType_Ip:
             regexStr = @"d+.d+.d+.d+";
             break;
+        case regexType_URL:
+            regexStr = @"[a-zA-z]+://[^s]*";
+            break;
         default:
             break;
     }
