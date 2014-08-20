@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A10A0A5A19A4F5A20067054D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10A0A5919A4F5A20067054D /* HomeViewController.m */; };
 		A137FD2719A04C7A001CBA32 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A137FD2619A04C7A001CBA32 /* Foundation.framework */; };
 		A137FD2919A04C7A001CBA32 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A137FD2819A04C7A001CBA32 /* CoreGraphics.framework */; };
 		A137FD2B19A04C7A001CBA32 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A137FD2A19A04C7A001CBA32 /* UIKit.framework */; };
@@ -33,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A10A0A5819A4F5A20067054D /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		A10A0A5919A4F5A20067054D /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		A137FD2319A04C7A001CBA32 /* JXRegular.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JXRegular.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A137FD2619A04C7A001CBA32 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A137FD2819A04C7A001CBA32 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -115,6 +118,8 @@
 			children = (
 				A137FD3519A04C7A001CBA32 /* AppDelegate.h */,
 				A137FD3619A04C7A001CBA32 /* AppDelegate.m */,
+				A10A0A5819A4F5A20067054D /* HomeViewController.h */,
+				A10A0A5919A4F5A20067054D /* HomeViewController.m */,
 				A137FD3819A04C7A001CBA32 /* Images.xcassets */,
 				A137FD2D19A04C7A001CBA32 /* Supporting Files */,
 			);
@@ -258,6 +263,7 @@
 				A137FD3719A04C7A001CBA32 /* AppDelegate.m in Sources */,
 				A137FD5D19A0EF1D001CBA32 /* NSString+JXRegular.m in Sources */,
 				A137FD3319A04C7A001CBA32 /* main.m in Sources */,
+				A10A0A5A19A4F5A20067054D /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,32 +7,15 @@
 //
 
 #import "AppDelegate.h"
-#import "NSString+JXRegular.h"
+#import "HomeViewController.h"
+
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    // 判断是否为中文
-    BOOL isMatching = [@"匹配是否含有中文" isRegexMatching:@"[^x00-xff]*"];
-    NSLog(@"匹配是否含有中文结果: %d", isMatching);
-    
-    // 查找匹配正则的子串
-    NSString *subStr = [@"我的手机号码是010-88888888" regexMatching:@"\\d{3}-\\d{8}|\\d{4}-\\d{7}"];
-    NSLog(@"%@", subStr);
-    
-    // 替换匹配正的的子串
-    NSString *replaceStr = [@"HAHAHA,我有一个的好东西" regex:@"HA" replaceStr:@"哈"];
-    NSLog(@"%@", replaceStr);
-    
-    
-    // 匹配某种业务
-    isMatching = [@"http://www.baidu.com" isRegexType:regexType_URL];
-    NSLog(@"%d", isMatching);
-
-    
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[HomeViewController alloc] init]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
