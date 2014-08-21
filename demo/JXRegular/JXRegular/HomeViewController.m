@@ -36,6 +36,8 @@
 {
     _inputTF = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 200, 40)];
     _inputTF.borderStyle = UITextBorderStyleRoundedRect;
+    _inputTF.autocapitalizationType = UITextAutocorrectionTypeNo;
+    _inputTF.autocorrectionType = UITextAutocorrectionTypeNo;
     self.navigationItem.titleView = _inputTF;
     
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(matchingRegex)];

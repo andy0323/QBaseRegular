@@ -56,16 +56,16 @@
             regexStr = @"[1-9][0-9]{4,}";
             break;
         case regexType_Email:
-            regexStr = @"w+([-+.]w+)*@w+([-.]w+)*.w+([-.]w+)*";
+            regexStr = @"^([a-z0-9]*[-_]?[a-z0-9]+)*@([a-z0-9]*[-_]?[a-z0-9]+)+[.][a-z]{2,3}([.][a-z]{2})?$";
             break;
         case regexType_PhoneNumber:
-            regexStr = @"d{3}-d{8}|d{4}-d{7}";
+            regexStr = @"[0-9]{3}-[0-9]{8}|[0-9]{4}-[0-9]{7}";
             break;
         case regexType_Ip:
-            regexStr = @"d+.d+.d+.d+";
+            regexStr = @"((25[0-5]|2[0-4][0-9]|((1[0-9]{2})|([1-9]?[0-9]))).){3}(25[0-5]|2[0-4][0-9]|((1[0-9]{2})|([1-9]?[0-9])))";
             break;
         case regexType_URL:
-            regexStr = @"[a-zA-z]+://[^s]*";
+            regexStr = @"(https?|ftp|mms)://([A-z0-9]+[_-]?[A-z0-9]+.)*[A-z0-9]+-?[A-z0-9]+.[A-z]{2,}(.*)*";
             break;
         default:
             break;
